@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:lts-buster
 
 LABEL maintainer="mehul.n.ved@gmail.com"
 
