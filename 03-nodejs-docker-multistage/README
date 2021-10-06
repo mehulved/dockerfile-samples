@@ -1,0 +1,1 @@
+Compare the size of docker image from version 0.1 or 0.2 to the size of the docker image in version 0.3. You can further experiment by using slim instead of alpine. It will give you an image size that is somewhere between the two.
