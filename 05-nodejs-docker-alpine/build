@@ -1,22 +1,22 @@
 #!/bin/bash
 
 # Build the container
-echo "Building Slashrtc Webapi..."
-docker build -t slashrtc:tmp .
-echo "Built Slashrtc Webapi..."
+echo "Building Webapi..."
+docker build -t webapi:tmp .
+echo "Built Webapi..."
 
 # Run the built image as a container
-docker run --name slashrtc-tmp --rm -d slashrtc:tmp
-echo "Slashrtc Webapi container started"
+docker run --name webapi-tmp --rm -d webapi:tmp
+echo "Webapi container started"
 
 # Get the value of app version
-VERSION=$(docker inspect --format='{{ index .Config.Labels "in.slashrtc.webapi.version"}}' slashrtc:tmp)
+VERSION=$(docker inspect --format='{{ index .Config.Labels "in.tutorial.webapi.version"}}' webapi:tmp)
 echo "Version: $VERSION"
 
 # Tag the image with version number
-docker tag slashrtc:tmp slashrtc:$VERSION
-echo "Image tagged as slashrtc:$VERSION"
+docker tag webapi:tmp webapi:$VERSION
+echo "Image tagged as webapi:$VERSION"
 
 # Stop the container
-docker stop slashrtc-tmp
-echo "Slashrtc Webapi container stopped"
+docker stop webapi-tmp
+echo "Webapi container stopped"

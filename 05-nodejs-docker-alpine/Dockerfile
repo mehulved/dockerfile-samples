@@ -2,15 +2,15 @@ FROM node:lts-alpine
 
 LABEL maintainer="mehul.n.ved@gmail.com"
 
-LABEL in.slashrtc.webapi.version="0.5"
+LABEL in.tutorial.webapi.version="0.5"
 
-RUN addgroup -S slashrtc && adduser -S slashrtc -G slashrtc
+RUN addgroup -S tutorial && adduser -S tutorial -G tutorial
 
-WORKDIR /home/slashrtc
+WORKDIR /home/tutorial
 
 RUN mkdir app
 
-WORKDIR /home/slashrtc/app
+WORKDIR /home/tutorial/app
 
 COPY package*.json .
 

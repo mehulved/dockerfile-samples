@@ -2,15 +2,15 @@ FROM node:lts-slim
 
 LABEL maintainer="mehul.n.ved@gmail.com"
 
-LABEL in.slashrtc.webapi.version="0.4"
+LABEL in.tutorial.webapi.version="0.4"
 
-RUN groupadd slashrtc && useradd --no-log-init -r -g slashrtc slashrtc
+RUN groupadd tutorial && useradd --no-log-init -r -g tutorial tutorial
 
-WORKDIR /home/slashrtc
+WORKDIR /home/tutorial
 
 RUN mkdir app
 
-WORKDIR /home/slashrtc/app
+WORKDIR /home/tutorial/app
 
 COPY package*.json .
 

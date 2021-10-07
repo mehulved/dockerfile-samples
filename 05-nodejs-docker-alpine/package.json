@@ -1,7 +1,7 @@
 {
-  "name": "slashrtc",
+  "name": "webapi",
   "version": "1.0.0",
-  "description": "Sample SlashRTC app",
+  "description": "Sample Webapi app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
